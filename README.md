@@ -82,6 +82,21 @@ Most AI tools are **too eager** – they jump straight to code, ignore domain lo
 | AI decides everything without asking you | **Mandatory human gates** – after every phase, you must click “continue” |
 | External dependencies block the flow | `specs/humanTodo.md` – AI pauses and waits for your input |
 
+### 📋 Know Where You Stand – Always
+
+Two files keep you and the AI perfectly aligned:
+
+| File | Purpose | Who Updates | Example |
+|------|---------|-------------|---------|
+| `specs/todo.md` | **Task tracking** – what's done, what's next, phase progress | AI (auto‑updated after each task/phase) | `- [x] Requirements`<br>`- [ ] Data Modeling` |
+| `specs/humanTodo.md` | **Human dependencies** – API keys, approvals, external configs | AI writes, you check off | `⬜ Provide WeChat Pay API key`<br>`⬜ Confirm order cancellation rule` |
+
+**No more guessing.**  
+- Stuck? Check `humanTodo.md` – the AI will even **pause and ask** you to complete pending items.  
+- Want to resume after a break? Open `todo.md` – you see exactly which phase or task is next.
+
+> This turns AI from a "black box" into a **transparent teammate**.
+
 ## 📐 The 5 Phases
 
 | Phase | Skill | Output | Human Gate |
@@ -138,6 +153,14 @@ User clicks Yes
 🎉 Flow complete.
 ```
 
+### 👤 When humanTodo.md has pending items
+
+```text
+📋 humanTodo.md has pending items:
+   ⬜ Provide Stripe API key
+⏸️ DevFlow: "Waiting for human tasks. Complete them and reply 'done'."
+```
+
 ## 📁 Project Structure After Running DevFlow
 
 ```
@@ -175,12 +198,11 @@ We welcome new skills, improvements to existing ones, or better gate mechanisms.
 
 ## 📄 License
 
-MIT © aiKeeo
+MIT © aikeeo
 
 ---
 
 <p align="center">
   Built for developers who want AI to be a teammate, not a runaway train.
 </p>
-
-
+```
