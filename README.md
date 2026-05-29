@@ -175,7 +175,7 @@ We welcome new skills, improvements to existing ones, or better gate mechanisms.
 
 ## 📄 License
 
-MIT © yourname
+MIT © aiKeeo
 
 ---
 
